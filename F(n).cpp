@@ -1,80 +1,7 @@
 ﻿#include <iostream>
 #include<stdio.h>
 using  namespace std;
-//int F();
-//int G();
-//
-//
-//
-//
-//
-//
-//
-//int F(int n)
-//{
-//
-//    if (n == 1)
-//    {
-//        return 1;
-//
-//    }
-//    else
-//        return (2 * G(n - 1) + (5 * n));
-//
-//}
-//int G(int n)
-//{
-//
-//    if (n == 1)
-//    {
-//        return 1;
-//
-//    }
-//    else
-//        return (2 * F(n - 1) + (5 * n));
-//
-//}
-//
-//
-//
-//int main()
-//{
-//    setlocale(LC_ALL, "RU");
-//    int n;
-//    F(n);
-//    G(n);
-//    cout << "Введите число: ";
-//    cin >> n;
-//    cout << endl;
-//    cout<< "Значение функции F(n) = "<< F(n) <<endl ;
-//    cout << "Значение функции G(n) = " << G(n) << endl;
-//
-//}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//int f(int n) {
-//    if (n < 1) {
-//        return 1;
-//    }
-//    else if (n % 2 == 0) {
-//        return n + f(n - 1);
-//    }
-//    else {
-//        return 2 * f(n - 2);
-//    }
-//}
 
 
 int f(int n)
@@ -84,13 +11,17 @@ int f(int n)
     {
         return 1;
     }
-    if( n%2 == 0)
-    {
-        return  n + f(n - 1);
-    }
-      if(n > 1 && n%2 != 0)
+    //if( n%2 == 0)                 // Проверяем на четность
+    //{
+    //    {
+    //        return  n + f(n - 1);
+    //    }
+    //}
+      if(n%2 != 0)                // Проверяем на нечетность
       
+      {
           return 2 * f(n - 2);
+      }
 }
 
 
@@ -101,7 +32,7 @@ int main() {
     std::cout << "Введите значение n: ";
     std::cin >> n;
     std::cout << "f(" << n << ") = " << f(n) << std::endl;
-    return 0;
+    
 }
 
 
